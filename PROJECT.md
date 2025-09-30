@@ -77,10 +77,19 @@ The automated feature update generator pulls data from the "Tracking Database" (
 6. Mark items as shared and update Release Version after publication
 
 **Configuration Settings:**
-- **Version Numbering**: Start at 1.0, increment by 0.01 for each release (1.0 → 1.01 → 1.02...)
+- **Output Format**: Word document (.docx)
+- **Title Format**: "Routine Editor Newsletter" (no version numbers in title)
+- **Date Display**: Centered current date below title (dynamically generated when program runs)
+- **Version Numbering**: Start at 1.0, increment by 0.01 for each release (1.0 → 1.01 → 1.02...) - used for Notion tracking only
 - **Feedback Contact**: Juan@distyl.ai
 - **Item Selection**: Include ALL unshared items unless explicitly instructed otherwise
 - **Summary Generation**: Auto-generate 1-Minute Summary from most impactful features
+
+**Formatting Requirements:**
+- **Emojis**: One professional emoji per feature (✅, 🚀, 📊, 🔒, etc.) before descriptions
+- **Typography**: Bold headings, key outcomes, and text before colons
+- **Whitespace**: Larger spacing between features; minimal spacing within feature content
+- **Visual Hierarchy**: Clear headings and subheadings for scannability
 
 ### Reference Files
 

@@ -4,6 +4,26 @@
 
 ---
 
+## Title Format
+# Routine Editor Newsletter
+
+<p align="center"><strong>[Dynamic Current Date]</strong></p>
+
+---
+
+## Formatting Guidelines
+
+**Output Format:** Word document (.docx)
+
+**Visual Structure:**
+- **Headings & Subheadings:** Use bold or header styles for each feature to improve scannability
+- **Whitespace:** Add larger spacing between features; minimal spacing within feature content (gestalt principles)
+- **Emojis:** Use 1 per feature description - simple, professional ones (✅, 🚀, 📊, 🔒, etc.)
+  - Place emojis before feature descriptions, left-justified as visual anchors
+- **Highlights:** Use bold to emphasize key outcomes/benefits and text before colons
+
+---
+
 ## 1-Minute Summary
 - [Insert 2–3 key highlights with their impact on users]
 
