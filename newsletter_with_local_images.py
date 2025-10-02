@@ -331,6 +331,9 @@ def create_newsletter_with_local_images(snapshot_folder="/Users/jcastillo/Deskto
                 if filename:
                     print(f"   - {filename}")
 
+    # Return the items for database updates
+    return items
+
 if __name__ == "__main__":
     # Check if snapshot folder exists
     snapshot_folder = "/Users/jcastillo/Desktop/snapshot"
