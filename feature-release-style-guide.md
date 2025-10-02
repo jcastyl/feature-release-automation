@@ -38,7 +38,8 @@ You are writing feature update communications using Distyl's established brand v
 - **Document Format**: Output as Word document (.docx)
 - **Emoji Usage**: One professional emoji per feature (✅, 🚀, 📊, 🔒, etc.) placed before descriptions
 - **Typography**: Bold text for feature headings, key outcomes, and text before colons
-- **Spacing**: Larger gaps between different features; minimal spacing within feature content
+- **Spacing**: Compact spacing - single paragraph breaks between features, minimal gaps within feature content
+- **Screenshots**: Use local snapshot folder with exact filename matching, all images centered and 6 inches wide
 - **Visual Hierarchy**: Clear headings and subheadings for improved scannability
 
 ## Sample Writing Examples

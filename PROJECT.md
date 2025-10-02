@@ -60,6 +60,7 @@ The automated feature update generator pulls data from the "Tracking Database" (
 - **Column 3** = "Why" (explanation of why users should care)
 - **Column 5** = "Share Status" (tracking if included in previous releases)
 - **Column 6** = "Release Version" (which version included this feature)
+- **Files & media** = Screenshots/media files for features
 
 **Status**: ✅ Database accessible with full read/write permissions for automated updates
 
@@ -69,27 +70,43 @@ The automated feature update generator pulls data from the "Tracking Database" (
 - **Growth Spotlight**: Skip this section until Growth Spotlight data source is provided
 
 **Automation Pipeline:**
-1. Query Improvement Tracker for items with empty "Share Status"
+1. Query Tracking Database for items with empty "Share Status"
 2. Group by Category for proper section placement
-3. Use "What" for feature description and "Why" for impact/value
-4. Auto-generate 1-Minute Summary from feature data highlights
-5. Follow template structure and style guidelines
-6. Mark items as shared and update Release Version after publication
+3. Extract original filenames from Notion "Files & media" column URLs
+4. Match filenames to local screenshot files in /Users/jcastillo/Desktop/snapshot folder
+5. Embed real images from local snapshot folder using doc.add_picture() with proper sizing
+6. Use "What" for feature description and "Why" for impact/value
+7. Auto-generate 1-Minute Summary from feature data highlights
+8. Create step-by-step "How it works" instructions for each feature (3 steps per feature)
+9. Follow template structure and style guidelines
+10. Generate Word document (.docx) output with embedded real screenshots
+11. Mark ALL included items as "Shared" and update Release Version after publication (both Feature: UX and Feature: Code items)
 
 **Configuration Settings:**
 - **Output Format**: Word document (.docx)
 - **Title Format**: "Routine Editor Newsletter" (no version numbers in title)
-- **Date Display**: Centered current date below title (dynamically generated when program runs)
-- **Version Numbering**: Start at 1.0, increment by 0.01 for each release (1.0 → 1.01 → 1.02...) - used for Notion tracking only
+- **Date Display**: Centered current date below title (dynamically generated when program runs) - MUST be properly bold formatted, NOT markdown
+- **Version Numbering**: Check Column 6 for highest existing version, increment by 0.01. If no versions exist, start at 1.01
 - **Feedback Contact**: Juan@distyl.ai
 - **Item Selection**: Include ALL unshared items unless explicitly instructed otherwise
+- **Post-Publication Updates**: Update ALL featured items (both UX and Code categories) with "Shared" status and current release version
 - **Summary Generation**: Auto-generate 1-Minute Summary from most impactful features
 
 **Formatting Requirements:**
 - **Emojis**: One professional emoji per feature (✅, 🚀, 📊, 🔒, etc.) before descriptions
 - **Typography**: Bold headings, key outcomes, and text before colons
-- **Whitespace**: Larger spacing between features; minimal spacing within feature content
+- **Whitespace**: Compact spacing - single paragraph breaks between features, minimal gaps
 - **Visual Hierarchy**: Clear headings and subheadings for scannability
+- **Numbering**: "How it works" steps use 1-3 numbering for EACH individual feature (not cumulative)
+- **Screenshots**: MANDATORY - If available in "Files & media" column:
+  - Extract original filenames from Notion file URLs using extract_image_filename()
+  - Match filenames to local screenshot files in /Users/jcastillo/Desktop/snapshot folder using exact filename matching only
+  - Embed real images using doc.add_picture(image_path, width=Inches(6))
+  - ABSOLUTELY FORBIDDEN: placeholders, text references, mock images
+  - REQUIRED: Only real embedded images from local snapshot folder are acceptable
+  - All screenshots: 6 inches wide for consistent visual uniformity
+  - Single or multiple screenshots all use same 6-inch sizing
+  - Local snapshot folder approach eliminates authentication issues
 
 ### Reference Files
 
